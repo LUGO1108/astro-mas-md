@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/Button.jsx";
+import datos from "../pages/blog/posts.json";
+
+const posts = await Astro.glob("../pages/blog/posts/*.md");
+
+
+---
+
+<Layout title="variedades">
+  <h1>pagina principal</h1>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, facere?
+    Recusandae porro neque fugit! Cum illum voluptate molestias modi ex
+    consequatur doloribus velit, earum illo iusto itaque provident aspernatur
+    labore?
+  </p>
+  <Button client:visible />
+
+  <div class="flex gap-5 justify-between p-4">
+    {
+      datos.map((dato) => (
+        <div class="text-center p-4 w-[300px] m-auto">
+          <h1 class="text-4xl text-slate-300">{dato.titulo}</h1>
+          <p class="text-xl">{dato.descripcion}</p>
+          <img class="w-[100px] m-auto mb-10" src={dato.imagen} alt="" />
+          
+         <a class="mt-10 rounded-full"  href={dato.url}>click</a>
+        </div>
+      ))
+    }
+  </div>
+
+</Layout>

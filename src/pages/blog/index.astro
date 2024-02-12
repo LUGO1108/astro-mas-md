@@ -1,0 +1,27 @@
+---
+
+import Layout from "../../layouts/Layout.astro";
+import bgImagen from "../../imagenes/logopng.png"
+import { Image } from "astro:assets";
+const posts = await Astro.glob("./posts/*.md");
+---
+
+<Layout title="post">
+  <h1>blog</h1>
+  <Image width="100" src={bgImagen} alt="tienda" />
+  {
+    posts.map((post) => {
+      return <a href={post.url} class="link">{post.frontmatter.title}</a>;
+    })
+  }
+
+  <style>
+    .link {
+      background: white;
+      color: black;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 4px;
+    }
+  </style>
+</Layout>

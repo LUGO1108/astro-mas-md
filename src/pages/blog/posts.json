@@ -1,0 +1,18 @@
+[
+    {
+     "titulo" : "la vida de mis ascotas ",
+     "descripcion" : "este gato duerme feliz ensima de los libos ",
+     "imagen" : "https://cdn.pixabay.com/photo/2023/11/27/15/41/cat-8415620_1280.jpg",
+     "url":"../blog/posts/mi-primer-post"
+ 
+    },
+    {
+     "titulo" : "son mejores los gatos",
+     "descripcion" : "tenemos la creencia de que los perros son mejores que los gatospero todo esto sera verdad?",
+     "imagen" : "https://cdn.pixabay.com/photo/2018/01/11/23/16/woman-3077180_1280.jpg",
+     "url":"../blog/posts/critica"
+ 
+    }
+ 
+ 
+ ]
